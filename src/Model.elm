@@ -10,10 +10,12 @@ import Legendaries exposing (Legendary, Legendary(..))
 import WarcraftLogs.Models as WCL
 
 type alias Model =
-  { reportCode : String
+  { reportCodes : List
+  , activeReportCode : String
   , fights : List WCL.Fight
   , friendlies : List WCL.Friendly
   , legendaries : Analyser.Model
+  -- todo , talents:
   , processed : Float
   , errorMessage : Maybe String
   , druids : Dict Int Druid
@@ -26,6 +28,7 @@ type alias Druid =
   , name : String
   , legendaries : List Legendary
   , healingDone : Int
+  -- todo , port the mastery stuff to live here (probably)
   }
 
 type Message
@@ -38,3 +41,6 @@ type Message
   | ClearErrorMessage
   | UrlChange Navigation.Location
   | OpenFightSelection
+
+type Message
+  = EnteringMultipleReportCodes String

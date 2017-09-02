@@ -1,7 +1,7 @@
 {
     "version": "1.0.0",
     "summary": "Analyse the effects of restoration druid legendaries",
-    "repository": "https://github.com/asvanberg/druid-legendary-analyser.git",
+    "repository": "https://github.com/awlego/druid-tools.git",
     "license": "GNU GPLv3",
     "source-directories": [
         "src"
