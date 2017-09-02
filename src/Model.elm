@@ -41,6 +41,4 @@ type Message
   | ClearErrorMessage
   | UrlChange Navigation.Location
   | OpenFightSelection
-
-type Message
-  = EnteringMultipleReportCodes String
+  
